@@ -1,8 +1,18 @@
+/*============================================
+c-cardクラスのスタイリング
+・c-card--ttl-center:WORKの各アイテム
+・c-card--bg:CASEの各アイテム
+============================================*/
 .c-card {
     @include breakpoint( tablet ) {
     }
     @include breakpoint( pc ) {
     }
+
+    /*============================================
+      p-section--workクラス内
+      c-card--ttl-centerクラスのスタイリング
+    ============================================*/
     &--ttl-center {
         width: 100%;
         margin-bottom: 20px;
@@ -31,6 +41,7 @@
                     font-size: 1.6rem;
                     font-weight: normal;
                     line-height: 2.4;
+                    /*↓これ必要？列が汚く見えるけど*/
                     &::first-line {
                         line-height: 1;
                     }
@@ -39,22 +50,28 @@
                     @include breakpoint( pc ) {
                         font-size: 1.4rem;
                     }
-                }
-            }
-            
-        }
-    }//&--ttl-center
+                }/*dd*/
+            }/*dl*/
+        }/*figcaption*/
+    }/*c-card--ttl-centerクラスのスタイリング終わり*/
+
+    /*============================================
+      p-section--caseクラス内
+      c-card--bgクラスのスタイリング
+    ============================================*/
     &--bg {
         position: relative;
         &::before {
             content: "";
             width: 100%;
             height: 100%;
+            /*画像を暗めに設定*/
             background: #000;
             display: block;
             position: absolute;
             top: 0;
             left: 0;
+            /*figcaptionのz-indexが2なので1に設定*/
             z-index: 1;
             opacity: .6;
         }
@@ -75,6 +92,7 @@
             flex-direction: column;
             align-items: stretch;
             justify-content: space-between;
+            /*--bg::beforeのz-indexが1なので2に設定（一番上に来る）*/
             z-index: 2;
         }
         header {
@@ -101,5 +119,5 @@
             font-size: 1.6rem;
             font-weight: normal;
         }
-    }
+    }/*c-card--bgクラスのスタイリング終わり*/
 }

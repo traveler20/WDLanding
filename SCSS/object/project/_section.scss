@@ -1,3 +1,6 @@
+/*===============================================
+p-sectionのスタイリング
+===============================================*/
 .p-section {
     padding: 0 30px 50px;
     @include breakpoint( tablet ) {
@@ -5,6 +8,10 @@
     @include breakpoint( pc ) {
         padding: 0 60px 120px;
     }
+/*===============================================
+p-section__headerのスタイリング
+（各セクションのheaderタイトル部分）
+===============================================*/
     &__header {
         margin-bottom: 30px;
         @include breakpoint( tablet ) {
@@ -12,6 +19,9 @@
         @include breakpoint( pc ) {
             margin-bottom: 60px;
         }
+        /*
+          *各セクションヘッダー画像のスタイリング
+          */
         img {
             margin-bottom: 30px;
             @include breakpoint( tablet ) {
@@ -19,6 +29,9 @@
             @include breakpoint( pc ) {
             }
         }
+        /*
+          *各セクションヘッダー見出し説明部分のスタイリング
+          */
         dl {
             @include breakpoint( tablet ) {
             }
@@ -42,7 +55,12 @@
                 }
             }
         }
-    }//__header
+    }/*p-section__headerのスタイリング終わり*/
+
+/*===============================================
+p-section__itemsのスタイリング
+（各セクションのitemsコンテンツ部分）
+===============================================*/
     &__items {
         list-style: none;
         @include breakpoint( tablet ) {
@@ -52,12 +70,19 @@
         @include breakpoint( pc ) {
         }
     }
+
+/*===============================================
+p-section--workのスタイリング
+===============================================*/
     &--work {
         @extend .p-section;
         @include breakpoint( tablet ) {
         }
         @include breakpoint( pc ) {
         }
+        /*
+          *p-section--work内のp-section__headerタイトル部分のスタイリング
+          */
         .p-section__header {
             @include breakpoint( tablet ) {
                 margin-bottom: 180px;
@@ -66,6 +91,7 @@
             @include breakpoint( pc ) {
                 margin-bottom: 60px;
             }
+            /*p-section__headerタイトル部分imgタグのスタイリング（WORK見出し画像部分）*/
             > img {
                 @include breakpoint( tablet ) {
                     width: 72.2%;
@@ -79,6 +105,7 @@
                     right: -60px;
                 }
             }
+            /*p-section__headerタイトル部分dlタグのスタイリング（WORK見出し説明部分）*/
             > dl {
                 @include breakpoint( tablet ) {
                     width: 40.8%;
@@ -86,38 +113,57 @@
                 @include breakpoint( pc ) {
                 }
             }
-        }//.p-section__header
+        }/*p-section--work内のp-section__headerタイトル部分のスタイリング終わり*/
+        /*
+          *p-section--work内のp-section__itemsコンテンツ部分のスタイリング
+          */
         .p-section__items {
             @include breakpoint( pc ) {
                 min-width: 753px;
                 width: 55.625%;
             }
+            /*p-section__items内のitemクラスのスタイリング*/
             .item {
                 background: #FFF9E8;
                 @include breakpoint( tablet ) {
                     width: calc( 33% - 15px );
                 }
             }
-        }
-    }//work
+        }/*p-section--work内のp-section__itemsコンテンツ部分のスタイリング終わり*/
+    }/*p-section--workのスタイリング終わり*/
+
+/*===============================================
+p-section--meritのスタイリング
+===============================================*/
     &--merit {
+        /*sectionごとの間隔*/
         margin-bottom: 50px;
+        /*borderとsectionの間隔*/
         padding: 50px 30px;
         background: #867A62;
+        /*PCはもう少しborderの間隔を広く設定*/
         @include breakpoint( pc ) {
             padding: 60px;
         }
+        /*
+          *p-section--merit内のc-innerのスタイリング（border内の部分）
+          */
         .c-inner {
             padding: 30px;
             border: 4px solid #fff;
             color: #fff;
         }
+        /*
+         *c-inner内のc-section-ttlsetのスタイリング（border内タイトル部分）*/
         .c-section-ttlset {
             margin-bottom: 40px;
             @include breakpoint( pc ) {
                 margin: auto auto 50px;
             }
         }
+        /*
+         *c-inner内のlistクラスのスタイリング（border内リスト部分）
+         */
         .list {
             margin: 0;
             padding: 0 10px;
@@ -127,13 +173,18 @@
                 padding-left: 20px;
                 padding-right: 20px;
             }
+            /*
+              *listクラス内のliタグのスタイリング（各リスト部分）
+              */
             li {
                 margin: 0 0 30px;
                 padding: 0 0 0 9px;
                 list-style-type: none;
+                /*最後のlistは下の余白無しに設定*/
                 &:last-child {
                     margin-bottom: 0;
                 }
+                /*liタグ内のdtタグbeforeのスタイリング（各リストアイコン部分）*/
                 dt {
                     &::before {
                         content: "";
@@ -143,6 +194,7 @@
                         background-repeat: no-repeat;
                     }
                 }
+                /*dtタグbeforeそれぞれのスタイリング（各アイコンの設定）*/
                 &:nth-child(1) {
                     dt {
                         &::before {
@@ -182,13 +234,16 @@
                         }
                     }
                 }
+                /*liタグ内のdlタグのスタイリング（各リスト部分）*/
                 dl {
+                    /*liタグ内のdtタグのスタイリング（各リストのタイトル部分）*/
                     dt {
                         margin-bottom: 15px;
                         font-size: 1.8rem;
                         display: flex;
                         align-items: center;
                     }
+                    /*liタグ内のddタグのスタイリング（各リストの説明部分）*/
                     dd {
                         margin-left: 27px;
                         font-size: 1.4rem;
@@ -196,11 +251,19 @@
                         white-space: wrap;
                     }
                 }
-            }
-        }
-    }//merit
+            }/*listクラス内のliタグスタイリング終わり*/
+        }/*c-inner内のlistクラスのスタイリング終わり*/
+    }/*p-section--meritのスタイリング終わり*/
+
+/*===============================================
+p-section--caseのスタイリング
+===============================================*/
     &--case {
+        /*p-sectionから引き継ぎ*/
         @extend .p-section;
+        /*
+          *p-section__itemsクラスのスタイリング（実績部分全体）
+          */
         .p-section__items {
             @include breakpoint( tablet ) {
                 flex-wrap: wrap;
@@ -209,28 +272,39 @@
                 width: 100%;
                 margin: auto;
             }
+            /*
+              *p-section__itemsクラス内のitemクラスのスタイリング（各実績部分）
+              */
             .item {
+                /*各item下部分の間隔*/
                 margin-bottom: 20px;
+                /*itemクラスのスタイリング（タブレットのとき）*/
                 @include breakpoint( tablet ) {
                     width: calc( 50% - 15px );
                     margin-bottom: 0;
                     margin-top: 30px;
-                }    
+                }
                 &:nth-child( 1 ),
                 &:nth-child( 2 ) {
                     @include breakpoint( tablet ) {
                         margin-top: 0;
                     }
                 }
-            }
-        }
-    }//case
+            }/*itemクラスのスタイリング終わり*/
+        }/*p-section__itemsクラスのスタイリング終わり*/
+    }/*p-section--caseのスタイリング終わり*/
+
+/*===============================================
+p-section--contactのスタイリング
+===============================================*/
     &--contact {
+        /*p-section--contact外の余白設定*/
         margin-bottom: 50px;
+        /*p-section--contact内の余白設定*/
         padding: 50px 30px;
         background: #FDF1D0;
         @include breakpoint( pc ) {
             padding: 120px 60px 120px;
         }
-    }
-}
+    }/*p-section--contactのスタイリング終わり*/
+}/*p-sectionのスタイリング終わり*/

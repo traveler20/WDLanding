@@ -1,10 +1,17 @@
+/*===================================
+フッター部分のスタイリング
+・l-footerクラス
+===================================*/
+
 .l-footer {
     padding: 30px;
     @include oswald;
     text-align: center;
+    /* フッターh2タグ部分のスタイリング */
     h2 {
         font-size: 2.4rem;
     }
+    /* フッターcopyright部分のスタイリング*/
     .copyright {
         small {
             font-size: 1.2rem;

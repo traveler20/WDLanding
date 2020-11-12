@@ -1,3 +1,11 @@
+/*===================================
+c-innerクラスのスタイリング
+・p-section--merit直下c-innerクラス
+・p-section--case直下c-innerクラス
+・p-section--contact直下c-innerクラス
+===================================*/
+
+/*PC上でのinnerセクションをスタイリング*/
 .c-inner {
     @include breakpoint ( pc ) {
         width: calc( 82.29% - 60px );

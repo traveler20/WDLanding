@@ -1,3 +1,8 @@
+/*===================================
+c-buttonクラスのスタイリング
+・p-section--contact内form内のc-button--submitクラスのスタイリング（送信ボタン）
+===================================*/
+
 .c-button {
     &--submit {
         width: 225px;
@@ -5,8 +10,11 @@
         background: #867A62;
         color: #fff;
         border: none;
+        /*カーソルを合わせるとポインターになる設定*/
         cursor: pointer;
+        /**/
         outline: none;
+        /**/
         appearance: none;
         font-size: 2.0rem;
         display: block;

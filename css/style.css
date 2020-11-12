@@ -710,28 +710,28 @@ body.is-open {
 .p-section--merit .list li:nth-child(1) dt::before {
   width: 14px;
   height: 17.73px;
-  background-image: url(../../../img/merit/ico01.svg);
+  background-image: url(../img/merit/ico01.svg);
 }
 
 .p-section--merit .list li:nth-child(2) dt::before {
   width: 17px;
   height: 17.73px;
   margin-left: -3px;
-  background-image: url(../../../img/merit/ico02.svg);
+  background-image: url(../img/merit/ico02.svg);
 }
 
 .p-section--merit .list li:nth-child(3) dt::before {
   width: 15px;
   height: 20.81px;
   margin-left: -5px;
-  background-image: url(../../../img/merit/ico03.svg);
+  background-image: url(../img/merit/ico03.svg);
 }
 
 .p-section--merit .list li:nth-child(4) dt::before {
   width: 16px;
   height: 19.37px;
   margin-left: -5px;
-  background-image: url(../../../img/merit/ico04.svg);
+  background-image: url(../img/merit/ico04.svg);
 }
 
 .p-section--merit .list li dl dt {

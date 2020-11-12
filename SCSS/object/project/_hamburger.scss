@@ -1,15 +1,25 @@
 $btnWidth: 20px;
 $btnHeight: 1px;
 
+/*============================================
+p-gnavi内のp-hamburgerクラスのスタイリング
+  ※ハンバーガーメニューのボタン部分
+  ※スマホのみ
+============================================*/
 .p-hamburger {
     width           : 60px;
     height          : 60px;
     background-color: #E6D6AA;
     position        : relative;
     border          : 0;
+    /*p-hamburgerクラス（PCのとき）※PCは無し*/
     @include breakpoint( pc ) {
         display: none;
     }
+    /*
+      * before :
+      * after    :
+      */
     &::before,
     &::after {
         content: "";
@@ -21,12 +31,17 @@ $btnHeight: 1px;
         display: block;
         transition: transform 0.2s;
     }
+    /*before */
     &::before {
         top: 22px;
     }
+    /*after */
     &::after {
         top: 38px;
     }
+    /*
+      *hamburgerクラス内のspanタグ（menuボタン）のスタイリング
+      */
     > span {
         width: $btnWidth;
         height: $btnHeight;
@@ -38,6 +53,10 @@ $btnHeight: 1px;
         top: 50%;
         transition: transform 0.2s;
     }
+
+    /*============================================
+    hamburgerクラスが開いているときのスタイリング
+    ============================================*/
     &.is-open {
         &::before,
         &::after {
@@ -55,8 +74,12 @@ $btnHeight: 1px;
         > span {
             background: none;
         }
-    }
+    }/*hamburgerクラスが開いているとき終わり*/
 }
+
+/*============================================
+bodyが開いているとき（hamburgerが閉じ）
+============================================*/
 body.is-open {
     position: fixed;
 }

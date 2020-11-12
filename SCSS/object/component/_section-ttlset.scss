@@ -1,15 +1,26 @@
+/*===============================================
+c-section-ttlsetのスタイリング
+・各セクションのh2タグ
+===============================================*/
 .c-section-ttlset {
     margin-bottom: 30px;
     font-size: 3.0rem;
     display: flex;
+    /*縦方向に中央寄せ*/
     align-items: center;
     line-height: 1;
     @include oswald;
+    /*c-section-ttlsetのスタイリング（タブレット）*/
     @include breakpoint( tablet ) {
     }
+    /*c-section-ttlsetのスタイリング（PC）*/
     @include breakpoint( pc ) {
+    /*PC用にフォントを大きめに設定*/
         font-size: 6.5rem;
     }
+    /*
+      *c-section-ttlset内のspanタグのスタイリング（ルビ部分）
+      */
     span {
         margin-left: 2.3rem;
         font-size: 1.4rem;
