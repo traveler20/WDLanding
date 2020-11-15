@@ -136,7 +136,7 @@ body {
 }
 
 .c-card--ttl-center figcaption {
-  padding: -1.5rem 0 30px;
+  padding: 0 30px 40px;
 }
 
 .c-card--ttl-center figcaption .ttl {
