@@ -7,79 +7,79 @@ p-gnavi内のp-hamburgerクラスのスタイリング
   ※スマホのみ
 ============================================*/
 .p-hamburger {
-    width           : 60px;
-    height          : 60px;
-    background-color: #E6D6AA;
-    position        : relative;
-    border          : 0;
-    /*p-hamburgerクラス（PCのとき）※PCは無し*/
-    @include breakpoint( pc ) {
-        display: none;
-    }
-    /*
+	width: 60px;
+	height: 60px;
+	background-color: #e6d6aa;
+	position: relative;
+	border: 0;
+	/*p-hamburgerクラス（PCのとき）※PCは無し*/
+	@include breakpoint(pc) {
+		display: none;
+	}
+	/*
       * before :
       * after    :
       */
-    &::before,
-    &::after {
-        content: "";
-        width: $btnWidth;
-        height: $btnHeight;
-        background: #1D1D1D;
-        position: absolute;
-        left: calc( 50% - ( #{$btnWidth} / 2 ) );
-        display: block;
-        transition: transform 0.2s;
-    }
-    /*before */
-    &::before {
-        top: 22px;
-    }
-    /*after */
-    &::after {
-        top: 38px;
-    }
-    /*
+	&::before,
+	&::after {
+		content: "";
+		width: $btnWidth;
+		height: $btnHeight;
+		background: #1d1d1d;
+		position: absolute;
+		left: calc(50% - (#{$btnWidth} / 2));
+		display: block;
+		transition: transform 0.2s;
+	}
+	/*before */
+	&::before {
+		top: 22px;
+	}
+	/*after */
+	&::after {
+		top: 38px;
+	}
+	/*
       *hamburgerクラス内のspanタグ（menuボタン）のスタイリング
       */
-    > span {
-        width: $btnWidth;
-        height: $btnHeight;
-        font-size: 0;
-        background: linear-gradient( to right, #1D1D1D, #1D1D1D ) repeat-x #1D1D1D;
-        background-size: auto $btnHeight;
-        position: absolute;
-        left: calc( 50% - ( #{$btnWidth} / 2 ) );
-        top: 50%;
-        transition: transform 0.2s;
-    }
+	> span {
+		width: $btnWidth;
+		height: $btnHeight;
+		font-size: 0;
+		background: linear-gradient(to right, #1d1d1d, #1d1d1d) repeat-x #1d1d1d;
+		background-size: auto $btnHeight;
+		position: absolute;
+		left: calc(50% - (#{$btnWidth} / 2));
+		top: 50%;
+		transition: transform 0.2s;
+	}
 
-    /*============================================
+	/*============================================
     hamburgerクラスが開いているときのスタイリング
     ============================================*/
-    &.is-open {
-        &::before,
-        &::after {
-            width: 40px;
-            left: calc( 50% - ( 40px / 2 ) );
-        }
-        &::before {
-            transform: rotate( 30deg );
-            top: 28px;
-        }
-        &::after {
-            transform: rotate( -30deg );
-            top: 28px;
-        }
-        > span {
-            background: none;
-        }
-    }/*hamburgerクラスが開いているとき終わり*/
+	&.is-open {
+		&::before,
+		&::after {
+			width: 40px;
+			left: calc(50% - (40px / 2));
+		}
+		&::before {
+			transform: rotate(30deg);
+			top: 28px;
+		}
+		&::after {
+			transform: rotate(-30deg);
+			top: 28px;
+		}
+		> span {
+			background: none;
+		}
+	} /*hamburgerクラスが開いているとき終わり*/
 }
 
 /*============================================
 bodyが開いているとき（hamburgerが閉じ）
 ============================================*/
 body.is-open {
-    position: fixed;
+	position: fixed;
 }

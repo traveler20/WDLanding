@@ -1,81 +1,81 @@
 /*============================================
 p-contactのスタイリング
 ============================================*/
+/*
+ * p-contact内のpタグのスタイリング
+ */
+/*
+ * p-contact内のformタグのスタイリング
+ */
 .p-contact {
-    /*
-      *p-contact内のpタグのスタイリング
-      */
-    > p {
-        margin-bottom: 30px;
-        font-size: 1.6rem;
-        line-height: 1.875;
-    }
-    /*
-      *p-contact内のformタグのスタイリング
-      */
-    form {
-        width: 100%;
-        /*form内のtableスタイリング*/
-        table {
-            width: 100%;
-            margin-bottom: 40px;
-        }
-        /*form内のtrスタイリング*/
-        tr {
-            width: 100%;
-        }
-        /*form内のtdスタイリング*/
-        td {
-            padding: 2px 2px 30px;
-            vertical-align: top;
-            box-sizing: border-box;
-            /*各tdのスタイリングをnth-childで指定*/
-            /*１つ目のtd（項目部分）*/
-            &:nth-child( 1 ) {
-                width: 80px;
-            }
-            /*２つ目のtd（記入部分）*/
-            &:nth-child( 2 ) {
-                width: 100%;
-            }
-            /*最後のtd（メッセージの記入部分）*/
-            &:last-child {
-                padding-bottom: 0;
-            }
-            /*td内のlabelタグ（項目部分）*/
-            label {
-                margin-top: -2px;
-                font-size: 1.6rem;
-                font-weight: bold;
-                display: block;
-                /*項目のフォントをspanでスタイリング*/
-                @include oswald;
-                span {
-                    font-size: 1.2rem;
-                }
-            }
-            /*td内のinput,textareaタグ（記入部分）*/
-            input,
-            textarea {
-                width: 100%;
-                padding: 10px;
-                font-size: 1.4rem;
-                display: block;
-                box-sizing: border-box;
-            }
-            /*td内のinputタグ（名前、メール記入部分）*/
-            input {
-                height: 45px;
-            }
-            /*td内のtextareaタグ（メッセージ記入部分）*/
-            textarea {
-                height: 120px;
-            }
-        }/*td部分のスタイリング終わり*/
-        /*form内のc-button--submitクラスのスタイリング（送信ボタン）*/
-        .c-button--submit {
-            /*送信ボタンを中央寄せにセット*/
-            margin: auto;
-        }
-    }
+	> p {
+		margin-bottom: 30px;
+		font-size: 1.6rem;
+		line-height: 1.875;
+	}
+	form {
+		width: 100%;
+		/*form内のtableスタイリング*/
+		table {
+			width: 100%;
+			margin-bottom: 40px;
+		}
+		/*form内のtrスタイリング*/
+		tr {
+			width: 100%;
+		}
+		/*form内のtdスタイリング*/
+		td {
+			padding: 2px 2px 30px;
+			vertical-align: top;
+			box-sizing: border-box;
+			/*各tdのスタイリングをnth-childで指定*/
+			/*１つ目のtd（項目部分）*/
+			&:nth-child(1) {
+				width: 80px;
+			}
+			/*２つ目のtd（記入部分）*/
+			&:nth-child(2) {
+				width: 100%;
+			}
+			/*最後のtd（メッセージの記入部分）*/
+			&:last-child {
+				padding-bottom: 0;
+			}
+			/*td内のlabelタグ（項目部分）*/
+			label {
+				margin-top: -2px;
+				font-size: 1.6rem;
+				font-weight: bold;
+				display: block;
+				/*項目のフォントをspanでスタイリング*/
+				@include oswald;
+				span {
+					font-size: 1.2rem;
+				}
+			}
+			/*td内のinput,textareaタグ（記入部分）*/
+			input,
+			textarea {
+				width: 100%;
+				padding: 10px;
+				font-size: 1.4rem;
+				display: block;
+				box-sizing: border-box;
+			}
+			/*td内のinputタグ（名前、メール記入部分）*/
+			input {
+				height: 45px;
+			}
+			/*td内のtextareaタグ（メッセージ記入部分）*/
+			textarea {
+				height: 120px;
+			}
+		} /*td部分のスタイリング終わり*/
+		/*form内のc-button--submitクラスのスタイリング（送信ボタン）*/
+		.c-button--submit {
+			/*送信ボタンを中央寄せにセット*/
+			margin: auto;
+		}
+	}
 }
