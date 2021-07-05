@@ -25,6 +25,7 @@ p-gnaviクラスのスタイリング
 		overflow-y: auto;
 		/*listクラス（PCのとき）*/
 		@include breakpoint(pc) {
+			display: flex;
 			width: inherit;
 			height: inherit;
 			padding: inherit;

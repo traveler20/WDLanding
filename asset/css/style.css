@@ -399,6 +399,9 @@ p-gnaviクラスのスタイリング
 
 @media (min-width: 769px) {
   .p-gnavi .list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     width: inherit;
     height: inherit;
     padding: inherit;
