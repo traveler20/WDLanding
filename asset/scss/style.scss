@@ -6,29 +6,29 @@ style.scss
 /*
  * foundation
  */
-@import "foundation/base";
+@use "foundation/base";
 
 /*
  * layout
  */
-@import "layout/header";
-@import "./layout/footer";
+@use "layout/header";
+@use "./layout/footer";
 
 /*
  *object
  */
 //component
-@import "./object/component/section-ttlset";
-@import "./object/component/card";
-@import "./object/component/inner";
-@import "./object/component/button";
+@use "./object/component/section-ttlset";
+@use "./object/component/card";
+@use "./object/component/inner";
+@use "./object/component/button";
 
 //project
-@import "./object/project/gnavi";
-@import "./object/project/hamburger";
-@import "./object/project/mainvisual";
-@import "./object/project/section";
-@import "./object/project/contact";
+@use "./object/project/gnavi";
+@use "./object/project/hamburger";
+@use "./object/project/mainvisual";
+@use "./object/project/section";
+@use "./object/project/contact";
 
 //utility
-@import "./object/utility/margin";
+@use "./object/utility/margin";

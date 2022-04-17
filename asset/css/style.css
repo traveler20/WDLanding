@@ -1,11 +1,4 @@
 @charset "UTF-8";
-/*==========================================================
-style.scss
-・他のscssファイルの一括管理
-==========================================================*/
-/*
- * foundation
- */
 /*breakpointの設定（一括管理）*/
 /*fontの設定（一括管理）*/
 /*書式設定（一括管理）*/
@@ -28,9 +21,6 @@ body {
   color: #1d1d1d;
 }
 
-/*
- * layout
- */
 /*===================================
 ヘッダー部分のスタイリング
 ・l-headerクラス
@@ -39,32 +29,22 @@ body {
   width: 100%;
   height: 60px;
   background-color: #f2dda6;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   /* l-headerクラスのスタイリング（タブレット） */
   /* l-headerクラスのスタイリング（PC） */
   /*
-     *l-header内のh1タグのスタイリング
-     */
+      *l-header内のh1タグのスタイリング
+      */
 }
-
 @media (min-width: 769px) {
   .l-header {
     height: 100px;
     max-height: 120px;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    justify-content: flex-start;
   }
 }
-
 .l-header > h1 {
   margin: auto;
   padding-left: 60px;
@@ -75,19 +55,15 @@ body {
   /*h1タグのスタイリング（タブレット）*/
   /*h1タグのスタイリング（PC）*/
 }
-
 @media (min-width: 640px) {
   .l-header > h1 {
-    -webkit-transition: all 300ms 0s ease;
     transition: all 300ms 0s ease;
   }
 }
-
 @media (min-width: 769px) {
   .l-header > h1 {
     margin: 4rem auto 4rem 40px;
     padding-left: 0;
-    -webkit-transition: all 600ms 0s ease;
     transition: all 600ms 0s ease;
     font-size: 3.125vw;
   }
@@ -105,56 +81,44 @@ body {
   /* フッターh2タグ部分のスタイリング */
   /* フッターcopyright部分のスタイリング*/
 }
-
 .l-footer h2 {
   font-size: 2.4rem;
 }
-
 .l-footer .copyright small {
   font-size: 1.2rem;
 }
 
-/*
- *object
- */
 /*===============================================
 c-section-ttlsetのスタイリング
 ・各セクションのh2タグ
 ===============================================*/
 .c-section-ttlset {
   margin-bottom: 30px;
-  font-size: 3.0rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  font-size: 3rem;
   display: flex;
   /*縦方向に中央寄せ*/
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   line-height: 1;
   font-family: "Oswald", sans-serif;
   font-weight: "400";
   /*c-section-ttlsetのスタイリング（タブレット）*/
   /*c-section-ttlsetのスタイリング（PC）*/
   /*
-      *c-section-ttlset内のspanタグのスタイリング（ルビ部分）
-      */
+       *c-section-ttlset内のspanタグのスタイリング（ルビ部分）
+       */
 }
-
 @media (min-width: 769px) {
   .c-section-ttlset {
     /*PC用にフォントを大きめに設定*/
     font-size: 6.5rem;
   }
 }
-
 .c-section-ttlset span {
   margin-left: 2.3rem;
   font-size: 1.4rem;
   font-weight: normal;
-  font-family: 'Noto Sans JP';
+  font-family: "Noto Sans JP";
 }
-
 /*============================================
 c-cardクラスのスタイリング
 ・c-card--ttl-center:WORKの各アイテム
@@ -162,78 +126,66 @@ c-cardクラスのスタイリング
 ============================================*/
 .c-card {
   /*============================================
-      p-section--workクラス内
-      c-card--ttl-centerクラスのスタイリング
-    ============================================*/
+       p-section--workクラス内
+       c-card--ttl-centerクラスのスタイリング
+     ============================================*/
   /*c-card--ttl-centerクラスのスタイリング終わり*/
   /*============================================
-      p-section--caseクラス内
-      c-card--bgクラスのスタイリング
-    ============================================*/
+       p-section--caseクラス内
+       c-card--bgクラスのスタイリング
+     ============================================*/
   /*c-card--bgクラスのスタイリング終わり*/
 }
-
 .c-card--ttl-center {
   width: 100%;
   margin-bottom: 20px;
   /*figcaption*/
 }
-
 @media (min-width: 640px) {
   .c-card--ttl-center {
     margin-bottom: 0;
   }
 }
-
 .c-card--ttl-center > img {
   width: 100%;
   margin: 0;
 }
-
 .c-card--ttl-center figcaption {
   padding: 0 30px 40px;
   /*dl*/
 }
-
 .c-card--ttl-center figcaption .ttl {
   margin: -1.5rem 0 30px;
-  font-size: 3.0rem;
+  font-size: 3rem;
   line-height: 1;
   font-family: "Oswald", sans-serif;
   font-weight: "400";
 }
-
 .c-card--ttl-center figcaption dl {
   /*dd*/
 }
-
 .c-card--ttl-center figcaption dl dt {
   margin-bottom: 15px;
   font-size: 1.8rem;
   font-weight: bold;
 }
-
 .c-card--ttl-center figcaption dl dd {
   font-size: 1.6rem;
   font-weight: normal;
   line-height: 2.4;
   /*↓これ必要？列が汚く見えるけど*/
 }
-
 .c-card--ttl-center figcaption dl dd::first-line {
   line-height: 1;
 }
-
 @media (min-width: 769px) {
   .c-card--ttl-center figcaption dl dd {
     font-size: 1.4rem;
   }
 }
-
 .c-card--bg {
   position: relative;
 }
-
 .c-card--bg::before {
   content: "";
   width: 100%;
@@ -246,48 +198,34 @@ c-cardクラスのスタイリング
   left: 0;
   /*figcaptionのz-indexが2なので1に設定*/
   z-index: 1;
-  opacity: .6;
+  opacity: 0.6;
 }
-
 .c-card--bg img {
   min-height: 410px;
 }
-
 @media (min-width: 769px) {
   .c-card--bg img {
     height: inherit;
   }
 }
-
 .c-card--bg figcaption {
-  width: calc( 100% - 30px);
-  height: calc( 100% - 30px);
+  width: calc(100% - 30px);
+  height: calc(100% - 30px);
   color: #fff;
   position: absolute;
   top: 15px;
   left: 15px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
   /*--bg::beforeのz-indexが1なので2に設定（一番上に来る）*/
   z-index: 2;
 }
-
 .c-card--bg header h2 {
   margin-bottom: 15px;
-  font-size: 2.0rem;
+  font-size: 2rem;
 }
-
 .c-card--bg header h2::after {
   content: "";
   width: 90px;
@@ -297,14 +235,12 @@ c-cardクラスのスタイリング
   border-bottom: 2px solid #fff;
   display: block;
 }
-
 .c-card--bg header time {
-  font-size: 2.0rem;
+  font-size: 2rem;
   font-family: "Oswald", sans-serif;
   font-weight: "400";
   font-weight: bold;
 }
-
 .c-card--bg p {
   font-size: 1.6rem;
   font-weight: normal;
@@ -319,7 +255,7 @@ c-innerクラスのスタイリング
 /*PC上でのinnerセクションをスタイリング*/
 @media (min-width: 769px) {
   .c-inner {
-    width: calc( 82.29% - 60px);
+    width: calc(82.29% - 60px);
     margin: auto;
   }
 }
@@ -342,7 +278,7 @@ c-buttonクラスのスタイリング
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  font-size: 2.0rem;
+  font-size: 2rem;
   display: block;
 }
 
@@ -351,20 +287,18 @@ p-gnaviクラスのスタイリング
 ===================================*/
 .p-gnavi {
   /*
-      *p-naviクラス内のlistクラスのスタイリング
-      */
+       *p-naviクラス内のlistクラスのスタイリング
+       */
   /*listクラスのスタイリング終わり*/
   /* navタグのp-gnaviクラスのスタイリングは継続中 */
   /*============================================
-    hambergerMenuが開いているとき
-    ============================================*/
+     hambergerMenuが開いているとき
+     ============================================*/
   /*
-	 * p-naviクラス内のlistクラスのスタイリング
-	*/
+   * p-naviクラス内のlistクラスのスタイリング
+  */
 }
-
 .p-gnavi .list {
-  -webkit-transition: all 300ms 0s ease;
   transition: all 300ms 0s ease;
   width: 100vw;
   height: 100vh;
@@ -373,20 +307,13 @@ p-gnaviクラスのスタイリング
   left: 100%;
   top: 60px;
   background-color: rgba(217, 199, 151, 0.95);
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   display: none;
   transition: all 300ms 0s ease;
   font-family: "Oswald", sans-serif;
   font-weight: "400";
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   /*リストの表示は一番上に設定*/
   z-index: 100;
   overflow-y: auto;
@@ -396,30 +323,20 @@ p-gnaviクラスのスタイリング
           */
   /*liタグのスタイリング終わり*/
 }
-
 @media (min-width: 769px) {
   .p-gnavi .list {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     width: inherit;
     height: inherit;
     padding: inherit;
     position: static;
     background: inherit;
-    -webkit-box-orient: inherit;
-    -webkit-box-direction: inherit;
-    -ms-flex-direction: inherit;
     flex-direction: inherit;
-    -webkit-transition: inherit;
     transition: inherit;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
     line-height: 2;
   }
 }
-
 .p-gnavi .list > li {
   width: 100px;
   margin: 0 auto 50px;
@@ -427,15 +344,14 @@ p-gnaviクラスのスタイリング
   text-align: center;
   /*liタグ（PCのとき）*/
   /*
-              *liタグ内のaタグのスタイリング
-              */
+             *liタグ内のaタグのスタイリング
+             */
   /*aタグのスタイリング終わり*/
   /*
-              *最後のliタグのスタイリング
-              */
+             *最後のliタグのスタイリング
+             */
   /*最後のliタグのスタイリング終わり*/
 }
-
 @media (min-width: 769px) {
   .p-gnavi .list > li {
     width: auto;
@@ -444,7 +360,6 @@ p-gnaviクラスのスタイリング
     text-align: left;
   }
 }
-
 .p-gnavi .list > li a {
   /*linkを踏んだ後*/
   /*linkにカーソルを合わせた時*/
@@ -452,15 +367,12 @@ p-gnaviクラスのスタイリング
   text-decoration: none;
   /* aタグ（PCのとき）*/
 }
-
 .p-gnavi .list > li a:link, .p-gnavi .list > li a:visited {
   color: #1d1d1d;
 }
-
 .p-gnavi .list > li a:hover, .p-gnavi .list > li a:active {
   color: #555;
 }
-
 @media (min-width: 769px) {
   .p-gnavi .list > li a {
     margin-right: 20px;
@@ -468,27 +380,21 @@ p-gnaviクラスのスタイリング
     white-space: nowrap;
   }
 }
-
 .p-gnavi .list > li:last-child {
   margin-bottom: 0;
   /*最後のliタグ内のaタグ（PCのとき）*/
 }
-
 @media (min-width: 769px) {
   .p-gnavi .list > li:last-child a {
     margin-right: 40px;
   }
 }
-
 .p-gnavi.is-open > .list {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   position: fixed;
   left: 0;
   /*listクラス（PCのとき）※スマホ時のみだからstatic流し*/
 }
-
 @media (min-width: 769px) {
   .p-gnavi.is-open > .list {
     position: static;
@@ -512,26 +418,24 @@ p-gnavi内のp-hamburgerクラスのスタイリング
   border: 0;
   /*p-hamburgerクラス（PCのとき）※PCは無し*/
   /*
-      * before :
-      * after    :
-      */
+       * before :
+       * after    :
+       */
   /*before */
   /*after */
   /*
-      *hamburgerクラス内のspanタグ（menuボタン）のスタイリング
-      */
+       *hamburgerクラス内のspanタグ（menuボタン）のスタイリング
+       */
   /*============================================
-    hamburgerクラスが開いているときのスタイリング
-    ============================================*/
+     hamburgerクラスが開いているときのスタイリング
+     ============================================*/
   /*hamburgerクラスが開いているとき終わり*/
 }
-
 @media (min-width: 769px) {
   .p-hamburger {
     display: none;
   }
 }
-
 .p-hamburger::before, .p-hamburger::after {
   content: "";
   width: 20px;
@@ -540,53 +444,37 @@ p-gnavi内のp-hamburgerクラスのスタイリング
   position: absolute;
   left: calc(50% - (20px / 2));
   display: block;
-  -webkit-transition: -webkit-transform 0.2s;
-  transition: -webkit-transform 0.2s;
   transition: transform 0.2s;
-  transition: transform 0.2s, -webkit-transform 0.2s;
 }
-
 .p-hamburger::before {
   top: 22px;
 }
-
 .p-hamburger::after {
   top: 38px;
 }
-
 .p-hamburger > span {
   width: 20px;
   height: 1px;
   font-size: 0;
-  background: -webkit-gradient(linear, left top, right top, from(#1d1d1d), to(#1d1d1d)) repeat-x #1d1d1d;
   background: linear-gradient(to right, #1d1d1d, #1d1d1d) repeat-x #1d1d1d;
   background-size: auto 1px;
   position: absolute;
   left: calc(50% - (20px / 2));
   top: 50%;
-  -webkit-transition: -webkit-transform 0.2s;
-  transition: -webkit-transform 0.2s;
   transition: transform 0.2s;
-  transition: transform 0.2s, -webkit-transform 0.2s;
 }
-
 .p-hamburger.is-open::before, .p-hamburger.is-open::after {
   width: 40px;
-  left: calc(50% - (40px / 2));
+  left: calc(50% - 20px);
 }
-
 .p-hamburger.is-open::before {
-  -webkit-transform: rotate(30deg);
-          transform: rotate(30deg);
+  transform: rotate(30deg);
   top: 28px;
 }
-
 .p-hamburger.is-open::after {
-  -webkit-transform: rotate(-30deg);
-          transform: rotate(-30deg);
+  transform: rotate(-30deg);
   top: 28px;
 }
-
 .p-hamburger.is-open > span {
   background: none;
 }
@@ -604,38 +492,30 @@ p-mainvisualのスタイリング
 .p-mainvisual {
   width: 100%;
   /*header分マイナスに*/
-  height: calc( 100vh - 60px);
+  height: calc(100vh - 60px);
   margin-bottom: 50px;
   background: #000;
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   z-index: 1;
   /*p-mainvisualのスタイリング（タブレット）*/
   /*p-mainvisualのスタイリング（PC）*/
   /*
-      *beforeで背景画像設置
-      */
+       *beforeで背景画像設置
+       */
   /*
-      *ttlsetでタイトルのスタイリング
-      */
+       *ttlsetでタイトルのスタイリング
+       */
   /*継承の＆でttlsetピンポイントで調整*/
 }
-
 @media (min-width: 769px) {
   .p-mainvisual {
-    height: calc( 100vh - 120px);
+    height: calc(100vh - 120px);
     margin-bottom: 120px;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
   }
 }
-
 .p-mainvisual::before {
   /*親要素に対してCSSを整える*/
   content: "";
@@ -646,7 +526,7 @@ p-mainvisualのスタイリング
   /*画像をリピートするため*/
   background-repeat: no-repeat;
   /*透過度を80％*/
-  opacity: .8;
+  opacity: 0.8;
   /*親要素に対していっぱいに指定*/
   background-size: cover;
   /*トリミングした画像を中央に指定*/
@@ -660,21 +540,18 @@ p-mainvisualのスタイリング
   /*beforeで背景画像設置（タブレット）*/
   /*beforeで背景画像設置（PC）*/
 }
-
 @media (min-width: 640px) {
   .p-mainvisual::before {
     background-image: url(../img/mv/tab@2x.jpg);
     background-repeat: no-repeat;
   }
 }
-
 @media (min-width: 769px) {
   .p-mainvisual::before {
     background-image: url(../img/mv/pc@2x.jpg);
     background-repeat: no-repeat;
   }
 }
-
 .p-mainvisual__ttlset {
   margin-left: 15px;
   color: #fff;
@@ -687,46 +564,38 @@ p-mainvisualのスタイリング
           *ttlsetクラス内のpタグのスタイリング
           */
 }
-
 @media (min-width: 640px) {
   .p-mainvisual__ttlset {
     /*スマホより少し上の位置に設定*/
     margin-top: -200px;
     /*アニメーションしながら変化*/
-    -webkit-transition: all 300ms 0s ease;
     transition: all 300ms 0s ease;
   }
 }
-
 @media (min-width: 769px) {
   .p-mainvisual__ttlset {
     margin-top: inherit;
-    -webkit-transition: all 600ms 0s ease;
     transition: all 600ms 0s ease;
     /*サイズに応じて変化させる*/
     margin-left: -21.71875%;
   }
 }
-
 .p-mainvisual__ttlset h2 {
   font-size: 4.2rem;
   font-weight: bold;
   /*h2タグのスタイリング（タブレット）*/
   /*h2タグのスタイリング（PC）*/
 }
-
 @media (min-width: 769px) {
   .p-mainvisual__ttlset h2 {
     /*PCは*/
-    font-size: 3.33333vw;
+    font-size: 3.3333333333vw;
   }
 }
-
 .p-mainvisual__ttlset p {
   padding: 4px;
   font-size: 1.4rem;
 }
-
 @media (min-width: 769px) {
   .p-mainvisual__ttlset p {
     font-size: 0.9375vw;
@@ -736,41 +605,39 @@ p-mainvisualのスタイリング
 /*===============================================
 p-sectionのスタイリング
 ===============================================*/
-.p-section, .p-section--work, .p-section--case {
+.p-section, .p-section--case, .p-section--work {
   padding: 0 30px 50px;
   /*===============================================
-p-section__headerのスタイリング
-（各セクションのheaderタイトル部分）
-===============================================*/
+  p-section__headerのスタイリング
+  （各セクションのheaderタイトル部分）
+  ===============================================*/
   /*p-section__headerのスタイリング終わり*/
   /*===============================================
-p-section__itemsのスタイリング
-（各セクションのitemsコンテンツ部分）
-===============================================*/
+  p-section__itemsのスタイリング
+  （各セクションのitemsコンテンツ部分）
+  ===============================================*/
   /*===============================================
-p-section--workのスタイリング
-===============================================*/
+  p-section--workのスタイリング
+  ===============================================*/
   /*p-section--workのスタイリング終わり*/
   /*===============================================
-p-section--meritのスタイリング
-===============================================*/
+  p-section--meritのスタイリング
+  ===============================================*/
   /*p-section--meritのスタイリング終わり*/
   /*===============================================
-p-section--caseのスタイリング
-===============================================*/
+  p-section--caseのスタイリング
+  ===============================================*/
   /*p-section--caseのスタイリング終わり*/
   /*===============================================
-p-section--contactのスタイリング
-===============================================*/
+  p-section--contactのスタイリング
+  ===============================================*/
   /*p-section--contactのスタイリング終わり*/
 }
-
 @media (min-width: 769px) {
-  .p-section, .p-section--work, .p-section--case {
+  .p-section, .p-section--case, .p-section--work {
     padding: 0 60px 120px;
   }
 }
-
 .p-section__header {
   margin-bottom: 30px;
   /*
@@ -780,43 +647,32 @@ p-section--contactのスタイリング
           *各セクションヘッダー見出し説明部分のスタイリング
           */
 }
-
 @media (min-width: 769px) {
   .p-section__header {
     margin-bottom: 60px;
   }
 }
-
 .p-section__header img {
   margin-bottom: 30px;
 }
-
 .p-section__header dl dt {
   margin-bottom: 20px;
-  font-size: 2.0rem;
+  font-size: 2rem;
   font-weight: bold;
 }
-
 .p-section__header dl dd {
   font-size: 1.6rem;
   line-height: 1.875;
 }
-
 .p-section__items {
   list-style: none;
 }
-
 @media (min-width: 640px) {
   .p-section__items {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    justify-content: space-between;
   }
 }
-
 .p-section--work {
   /*
           *p-section--work内のp-section__headerタイトル部分のスタイリング
@@ -827,25 +683,21 @@ p-section--contactのスタイリング
           */
   /*p-section--work内のp-section__itemsコンテンツ部分のスタイリング終わり*/
 }
-
 .p-section--work .p-section__header {
   /*p-section__headerタイトル部分imgタグのスタイリング（WORK見出し画像部分）*/
   /*p-section__headerタイトル部分dlタグのスタイリング（WORK見出し説明部分）*/
 }
-
 @media (min-width: 640px) {
   .p-section--work .p-section__header {
     margin-bottom: 180px;
     position: relative;
   }
 }
-
 @media (min-width: 769px) {
   .p-section--work .p-section__header {
     margin-bottom: 60px;
   }
 }
-
 @media (min-width: 640px) {
   .p-section--work .p-section__header > img {
     width: 72.2%;
@@ -855,47 +707,40 @@ p-section--contactのスタイリング
     z-index: -1;
   }
 }
-
 @media (min-width: 769px) {
   .p-section--work .p-section__header > img {
     width: 50%;
     right: -60px;
   }
 }
-
 @media (min-width: 640px) {
   .p-section--work .p-section__header > dl {
     width: 40.8%;
   }
 }
-
 .p-section--work .p-section__items {
   /*p-section__items内のitemクラスのスタイリング*/
 }
-
 @media (min-width: 769px) {
   .p-section--work .p-section__items {
     min-width: 753px;
     width: 55.625%;
   }
 }
-
 .p-section--work .p-section__items .item {
-  background: #FFF9E8;
+  background: #fff9e8;
 }
-
 @media (min-width: 640px) {
   .p-section--work .p-section__items .item {
-    width: calc( 33% - 15px);
+    width: calc(33% - 15px);
   }
 }
-
 .p-section--merit {
   /*sectionごとの間隔*/
   margin-bottom: 50px;
   /*borderとsectionの間隔*/
   padding: 50px 30px;
-  background: #867A62;
+  background: #867a62;
   /*PCはもう少しborderの間隔を広く設定*/
   /*
           *p-section--merit内のc-innerのスタイリング（border内の部分）
@@ -907,38 +752,32 @@ p-section--contactのスタイリング
          */
   /*c-inner内のlistクラスのスタイリング終わり*/
 }
-
 @media (min-width: 769px) {
   .p-section--merit {
     padding: 60px;
   }
 }
-
 .p-section--merit .c-inner {
   padding: 30px;
   border: 4px solid #fff;
   color: #fff;
 }
-
 .p-section--merit .c-section-ttlset {
   margin-bottom: 40px;
 }
-
 @media (min-width: 769px) {
   .p-section--merit .c-section-ttlset {
     margin: auto auto 50px;
   }
 }
-
 .p-section--merit .list {
   margin: 0;
   padding: 0 10px;
   /*
-              *listクラス内のliタグのスタイリング（各リスト部分）
-              */
+             *listクラス内のliタグのスタイリング（各リスト部分）
+             */
   /*listクラス内のliタグスタイリング終わり*/
 }
-
 @media (min-width: 769px) {
   .p-section--merit .list {
     margin-left: auto;
@@ -947,7 +786,6 @@ p-section--contactのスタイリング
     padding-right: 20px;
   }
 }
-
 .p-section--merit .list li {
   margin: 0 0 30px;
   padding: 0 0 0 9px;
@@ -957,11 +795,9 @@ p-section--contactのスタイリング
   /*dtタグbeforeそれぞれのスタイリング（各アイコンの設定）*/
   /*liタグ内のdlタグのスタイリング（各リスト部分）*/
 }
-
 .p-section--merit .list li:last-child {
   margin-bottom: 0;
 }
-
 .p-section--merit .list li dt::before {
   content: "";
   margin-right: 13.3px;
@@ -969,57 +805,45 @@ p-section--contactのスタイリング
   background-size: cover;
   background-repeat: no-repeat;
 }
-
 .p-section--merit .list li:nth-child(1) dt::before {
   width: 14px;
   height: 17.73px;
   background-image: url(../img/merit/ico01.svg);
 }
-
 .p-section--merit .list li:nth-child(2) dt::before {
   width: 14px;
   height: 17.73px;
   margin-left: -3px;
   background-image: url(../img/merit/ico02.svg);
 }
-
 .p-section--merit .list li:nth-child(3) dt::before {
   width: 14px;
   height: 17.73px;
   margin-left: -5px;
   background-image: url(../img/merit/ico03.svg);
 }
-
 .p-section--merit .list li:nth-child(4) dt::before {
   width: 14px;
   height: 17.73px;
   margin-left: -5px;
   background-image: url(../img/merit/ico04.svg);
 }
-
 .p-section--merit .list li dl {
   /*liタグ内のdtタグのスタイリング（各リストのタイトル部分）*/
   /*liタグ内のddタグのスタイリング（各リストの説明部分）*/
 }
-
 .p-section--merit .list li dl dt {
   margin-bottom: 15px;
   font-size: 1.8rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
-
 .p-section--merit .list li dl dd {
   margin-left: 27px;
   font-size: 1.4rem;
   line-height: 1.714;
   white-space: wrap;
 }
-
 .p-section--case {
   /*p-sectionから引き継ぎ*/
   /*
@@ -1027,56 +851,47 @@ p-section--contactのスタイリング
           */
   /*p-section__itemsクラスのスタイリング終わり*/
 }
-
 .p-section--case .p-section__items {
   /*
-              *p-section__itemsクラス内のitemクラスのスタイリング（各実績部分）
-              */
+             *p-section__itemsクラス内のitemクラスのスタイリング（各実績部分）
+             */
   /*itemクラスのスタイリング終わり*/
 }
-
 @media (min-width: 640px) {
   .p-section--case .p-section__items {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
   }
 }
-
 @media (min-width: 769px) {
   .p-section--case .p-section__items {
     width: 100%;
     margin: auto;
   }
 }
-
 .p-section--case .p-section__items .item {
   /*各item下部分の間隔*/
   margin-bottom: 20px;
   /*itemクラスのスタイリング（タブレットのとき）*/
 }
-
 @media (min-width: 640px) {
   .p-section--case .p-section__items .item {
-    width: calc( 50% - 15px);
+    width: calc(50% - 15px);
     margin-bottom: 0;
     margin-top: 30px;
   }
 }
-
 @media (min-width: 640px) {
   .p-section--case .p-section__items .item:nth-child(1), .p-section--case .p-section__items .item:nth-child(2) {
     margin-top: 0;
   }
 }
-
 .p-section--contact {
   /*p-section--contact外の余白設定*/
   margin-bottom: 50px;
   /*p-section--contact内の余白設定*/
   padding: 50px 30px;
-  background: #FDF1D0;
+  background: #fdf1d0;
 }
-
 @media (min-width: 769px) {
   .p-section--contact {
     padding: 120px 60px 120px;
@@ -1098,7 +913,6 @@ p-contactのスタイリング
   font-size: 1.6rem;
   line-height: 1.875;
 }
-
 .p-contact form {
   width: 100%;
   /*form内のtableスタイリング*/
@@ -1107,21 +921,17 @@ p-contactのスタイリング
   /*td部分のスタイリング終わり*/
   /*form内のc-button--submitクラスのスタイリング（送信ボタン）*/
 }
-
 .p-contact form table {
   width: 100%;
   margin-bottom: 40px;
 }
-
 .p-contact form tr {
   width: 100%;
 }
-
 .p-contact form td {
   padding: 2px 2px 30px;
   vertical-align: top;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   /*各tdのスタイリングをnth-childで指定*/
   /*１つ目のtd（項目部分）*/
   /*２つ目のtd（記入部分）*/
@@ -1131,19 +941,15 @@ p-contactのスタイリング
   /*td内のinputタグ（名前、メール記入部分）*/
   /*td内のtextareaタグ（メッセージ記入部分）*/
 }
-
 .p-contact form td:nth-child(1) {
   width: 80px;
 }
-
 .p-contact form td:nth-child(2) {
   width: 100%;
 }
-
 .p-contact form td:last-child {
   padding-bottom: 0;
 }
-
 .p-contact form td label {
   margin-top: -2px;
   font-size: 1.6rem;
@@ -1153,29 +959,23 @@ p-contactのスタイリング
   font-family: "Oswald", sans-serif;
   font-weight: "400";
 }
-
 .p-contact form td label span {
   font-size: 1.2rem;
 }
-
 .p-contact form td input,
 .p-contact form td textarea {
   width: 100%;
   padding: 10px;
   font-size: 1.4rem;
   display: block;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
-
 .p-contact form td input {
   height: 45px;
 }
-
 .p-contact form td textarea {
   height: 120px;
 }
-
 .p-contact form .c-button--submit {
   /*送信ボタンを中央寄せにセット*/
   margin: auto;
@@ -1189,4 +989,18 @@ u-marginクラスのスタイリング
 .u-margin--bottom0 {
   margin-bottom: 0;
 }
+
+/*==========================================================
+style.scss
+・他のscssファイルの一括管理
+==========================================================*/
+/*
+ * foundation
+ */
+/*
+ * layout
+ */
+/*
+ *object
+ */
 /*# sourceMappingURL=style.css.map */
